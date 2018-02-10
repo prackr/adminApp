@@ -1,6 +1,6 @@
 $(document).ready(function () {
   //base api url
-  let baseUrl = 'http://localhost:9000/api/v1/'
+  let baseUrl = 'http://taskto.com/api/v1/'
   $('.otp').hide();
   $('.user').hide();
   $('.company').hide();
