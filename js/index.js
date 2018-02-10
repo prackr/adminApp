@@ -1,6 +1,7 @@
 $(document).ready(function () {
   //base api url
   let baseUrl = 'http://taskto.com/api/v1/'
+
   $('.otp').hide();
   $('.user').hide();
   $('.company').hide();
@@ -8,6 +9,7 @@ $(document).ready(function () {
 
   let userExists = false;
   let user = null;
+
 
   // disbaling enter btn submit
   $('form').on('keyup keypress', function(e) {
