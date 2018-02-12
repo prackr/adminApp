@@ -11,6 +11,11 @@ $(document).ready(function () {
   let userExists = false;
   let user = null;
 
+  //window unload confirm
+  window.onbeforeunload = function() {
+    return "";
+  };
+
 
   // disbaling enter btn submit
   $('form').on('keyup keypress', function(e) {
@@ -218,7 +223,7 @@ $(document).ready(function () {
                           { email: email, cName: cName, bizName:cbizName,
                             numOfUsers: cNoOfUsers, plan:cPlan, message:cMessage
                           },
-                          function(){
+                          function(data){
                             if (data.status == 200) {
                               toastr.info("workspace created successfully.");
                               toastr.info("please wait, while redirect you to your workspace.");
@@ -247,6 +252,7 @@ $(document).ready(function () {
   });
 
   $('#step4btn').on('click', function () {
+
     let email = $('#email').val();
     let cName = $('#cName1').val();
     let cbizName = $('#cBizName1').val();
