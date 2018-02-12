@@ -1,6 +1,7 @@
 $(document).ready(function () {
+
   //base api url
-  let baseUrl = 'http://taskto.com/api/v1/'
+  let baseUrl = 'https://taskto.com/api/v1/'
 
   $('.otp').hide();
   $('.user').hide();
@@ -217,9 +218,11 @@ $(document).ready(function () {
                           { email: email, cName: cName, bizName:cbizName,
                             numOfUsers: cNoOfUsers, plan:cPlan, message:cMessage
                           },
-                          function(data){
+                          function(){
                             if (data.status == 200) {
                               toastr.info("workspace created successfully.");
+                              toastr.info("please wait, while redirect you to your workspace.");
+                              setTimeout($(location).attr('href',`https://${data.data.bizName}.taskto.com`), 5000);
                             }else{
                               toastr.error(data.message);
                             };
@@ -267,6 +270,8 @@ $(document).ready(function () {
           function(data){
             if (data.status == 200) {
               toastr.info("workspace created successfully.");
+              toastr.info("please wait, while redirect you to your workspace.");
+              setTimeout($(location).attr('href',`https://${data.data.bizName}.taskto.com`), 5000);
             }else{
               toastr.error(data.message);
             };
