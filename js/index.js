@@ -229,7 +229,9 @@ $(document).ready(function () {
                               $(window).unbind('beforeunload');
                               toastr.info("workspace created successfully.");
                               toastr.info("please wait, while redirect you to your workspace.");
-                              $(location).attr('href',`https://${data.data.bizName}.taskto.com`);
+                              setTimeout(function(){
+                                $(location).attr('href',`https://${data.data.bizName}.taskto.com`);
+                              }, 5000);
                             }else{
                               toastr.error(data.message);
                             };
@@ -280,7 +282,9 @@ $(document).ready(function () {
               $(window).unbind('beforeunload');
               toastr.info("workspace created successfully.");
               toastr.info("please wait, while redirect you to your workspace.");
-              $(location).attr('href',`https://${data.data.bizName}.taskto.com`);
+              setTimeout(function(){
+                $(location).attr('href',`https://${data.data.bizName}.taskto.com`);
+              }, 5000);
             }else{
               toastr.error(data.message);
             };
