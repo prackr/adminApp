@@ -12,9 +12,10 @@ $(document).ready(function () {
   let user = null;
 
   //window unload confirm
-  window.onbeforeunload = function() {
-    return "";
-  };
+  $(window).bind('beforeunload',function() {
+    return "'Are you sure you want to leave the page. All data will be lost!";
+  });
+
 
 
   // disbaling enter btn submit
@@ -225,9 +226,10 @@ $(document).ready(function () {
                           },
                           function(data){
                             if (data.status == 200) {
+                              $(window).unbind('beforeunload');
                               toastr.info("workspace created successfully.");
                               toastr.info("please wait, while redirect you to your workspace.");
-                              setTimeout($(location).attr('href',`https://${data.data.bizName}.taskto.com`), 5000);
+                              $(location).attr('href',`https://${data.data.bizName}.taskto.com`);
                             }else{
                               toastr.error(data.message);
                             };
@@ -275,9 +277,10 @@ $(document).ready(function () {
           },
           function(data){
             if (data.status == 200) {
+              $(window).unbind('beforeunload');
               toastr.info("workspace created successfully.");
               toastr.info("please wait, while redirect you to your workspace.");
-              setTimeout($(location).attr('href',`https://${data.data.bizName}.taskto.com`), 5000);
+              $(location).attr('href',`https://${data.data.bizName}.taskto.com`);
             }else{
               toastr.error(data.message);
             };
