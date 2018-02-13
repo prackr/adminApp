@@ -844,7 +844,20 @@ fieldset[disabled] .form-control {
   z-index: 1000;
   top: 50px;
   left: 25px;
-  background: #0A4E99;
+  /* background: #0A4E99; */
+}
+
+.gLogo{
+  display: block;
+  position: relative;
+  z-index: 1000;
+  top: 50px;
+  left: 25px;
+  /* background: #0A4E99; */
+}
+.headerLogo{
+  min-height: 12vh;
+  display: block;
 }
 .step{
   display: inline-block;
@@ -866,6 +879,33 @@ fieldset[disabled] .form-control {
   background-size: cover;
   -o-background-size: cover;
   min-height: 100vh;
+}
+.redirect{
+  background: white;
+  background-image: url('../img/redirect.svg');
+  background-repeat: no-repeat;
+  /* background-attachment: scroll; */
+  background-position: center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  -o-background-size: contain;
+  /* max-height: 80vh; */
+  min-height: 70vh;
+}
+
+
+.headerLogo{
+  display: block;
+}
+
+.redirectURL{
+  border-left: 5px solid #04B9E6;
+  display: inline-block;
+  position: fixed;
+  z-index: 1000;
+  bottom: 5px;
+  right: 15px;
 }
 
 .tagLine {
@@ -902,3 +942,260 @@ input:-webkit-autofill:active {
   width: 35px;
   position: relative;
 } */
+
+/* redirect loader css */
+
+.h1LoaderDiv {
+  position: fixed;
+  font-weight: 600;
+  font-size: 12px;  font-family: 'Open Sans';
+  display: block;
+  text-transform: uppercase;
+  right: 68px;
+  top: 50px;
+  color: #999999;
+  /* margin-left: -20px; */
+}
+
+.loaderDiv {
+  background-color: #f1c40f;
+  max-height: 15vh;
+  max-width: 5vh;
+  /* overflow-y: hidden; */
+  display: inline-block;
+  position: fixed;
+  top: 50px;
+  /* margin-right: -50px; */
+  right: 180px;
+  z-index: 5000;
+  animation: speeder .3s linear infinite;
+}
+.loaderDiv > span {
+  height: 5px;
+  width: 35px;
+  background: #999999;
+  position: absolute;
+  top: -19px;
+  left: 60px;
+  border-radius: 2px 10px 1px 0;
+}
+
+.base span {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-right: 100px solid #999999;
+  border-bottom: 6px solid transparent;
+}
+.base span:before {
+  content: "";
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: #999999;
+  position: absolute;
+  right: -110px;
+  top: -16px;
+}
+.base span:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 0 solid transparent;
+  border-right: 55px solid #999999;
+  border-bottom: 16px solid transparent;
+  top: -16px;
+  right: -98px;
+}
+
+.face {
+  position: absolute;
+  height: 12px;
+  width: 20px;
+  background: #999999;
+  border-radius: 20px 20px 0 0;
+  transform: rotate(-40deg);
+  right: -125px;
+  top: -15px;
+}
+.face:after {
+  content: "";
+  height: 12px;
+  width: 12px;
+  background: #999999;
+  right: 4px;
+  top: 7px;
+  position: absolute;
+  transform: rotate(40deg);
+  transform-origin: 50% 50%;
+  border-radius: 0 0 0 2px;
+}
+
+.loaderDiv > span > span:nth-child(1),
+.loaderDiv > span > span:nth-child(2),
+.loaderDiv > span > span:nth-child(3),
+.loaderDiv > span > span:nth-child(4) {
+  width: 30px;
+  height: 1px;
+  background: #1b14e2;
+  position: absolute;
+  animation: fazer1 .2s linear infinite;
+}
+
+.loaderDiv > span > span:nth-child(2) {
+  top: 3px;
+  animation: fazer2 .4s linear infinite;
+}
+
+.loaderDiv > span > span:nth-child(3) {
+  top: 1px;
+  animation: fazer3 .4s linear infinite;
+  animation-delay: -1s;
+}
+
+.loaderDiv > span > span:nth-child(4) {
+  top: 4px;
+  animation: fazer4 1s linear infinite;
+  animation-delay: -1s;
+}
+
+@keyframes fazer1 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -80px;
+    opacity: 0;
+  }
+}
+@keyframes fazer2 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100px;
+    opacity: 0;
+  }
+}
+@keyframes fazer3 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -50px;
+    opacity: 0;
+  }
+}
+@keyframes fazer4 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -150px;
+    opacity: 0;
+  }
+}
+@keyframes speeder {
+  0% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -3px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-2px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 3px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-1px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-2px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.longfazers {
+  position: fixed;
+  width: 100%;
+  height: 45%;
+}
+.longfazers span {
+  position: absolute;
+  height: 1.8px;
+  width: 20%;
+  background: #f4d93f;
+}
+.longfazers span:nth-child(1) {
+  top: 5%;
+  animation: lf .6s linear infinite;
+  animation-delay: -5s;
+}
+.longfazers span:nth-child(2) {
+  top: 10%;
+  animation: lf2 .8s linear infinite;
+  animation-delay: -1s;
+}
+.longfazers span:nth-child(3) {
+  top: 20%;
+  animation: lf3 .6s linear infinite;
+}
+.longfazers span:nth-child(4) {
+  top: 40%;
+  animation: lf4 .5s linear infinite;
+  animation-delay: -3s;
+}
+
+@keyframes lf {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -200%;
+    opacity: 0;
+  }
+}
+@keyframes lf2 {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -200%;
+    opacity: 0;
+  }
+}
+@keyframes lf3 {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -100%;
+    opacity: 0;
+  }
+}
+@keyframes lf4 {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -100%;
+    opacity: 0;
+  }
+}

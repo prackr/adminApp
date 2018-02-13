@@ -6,6 +6,7 @@ $(document).ready(function () {
   $('.otp').hide();
   $('.user').hide();
   $('.company').hide();
+  $('.redirectElements').hide();
   $('#stepNumber').text(1);
 
   let userExists = false;
@@ -48,7 +49,7 @@ $(document).ready(function () {
     "positionClass": "toast-top-right",
     "preventDuplicates": false,
     "onclick": null,
-    "showDuration": "300",
+    "showDuration": "200",
     "hideDuration": "1000",
     "timeOut": "5000",
     "extendedTimeOut": "1000",
@@ -226,12 +227,18 @@ $(document).ready(function () {
                           },
                           function(data){
                             if (data.status == 200) {
+                              $('#bizURL1').text(`https://${data.data.bizName}.taskto.com`);
+                              $("a.bizURL2").attr("href", `https://${data.data.bizName}.taskto.com`);
+                              $('.user').hide();
+                              $('.firstCard').hide();
+                              $('.step').hide();
+                              $('.redirectElements').show();
                               $(window).unbind('beforeunload');
-                              toastr.info("workspace created successfully.");
-                              toastr.info("please wait, while redirect you to your workspace.");
+                              // toastr.info("workspace created successfully.");
+                              // toastr.info("please wait, while redirect you to your workspace.");
                               setTimeout(function(){
                                 $(location).attr('href',`https://${data.data.bizName}.taskto.com`);
-                              }, 5000);
+                              }, 7000);
                             }else{
                               toastr.error(data.message);
                             };
@@ -279,12 +286,18 @@ $(document).ready(function () {
           },
           function(data){
             if (data.status == 200) {
+              $('#bizURL1').text(`https://${data.data.bizName}.taskto.com`);
+              $("a.bizURL2").attr("href", `https://${data.data.bizName}.taskto.com`);
+              $('.company').hide();
+              $('.firstCard').hide();
+              $('.step').hide();
+              $('.redirectElements').show();
               $(window).unbind('beforeunload');
-              toastr.info("workspace created successfully.");
-              toastr.info("please wait, while redirect you to your workspace.");
+              // toastr.info("workspace created successfully.");
+              // toastr.info("please wait, while redirect you to your workspace.");
               setTimeout(function(){
                 $(location).attr('href',`https://${data.data.bizName}.taskto.com`);
-              }, 5000);
+              }, 7000);
             }else{
               toastr.error(data.message);
             };
