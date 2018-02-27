@@ -49,7 +49,10 @@
               $('#cTable').append(
   `<tr>
   <td class="text-bold">${el.name}</td>
-  <td class="text-bold">${el.bizName}</td>
+  <td>
+  <span class="table__td"><b>BizName</b> : <span class='name'>${el.bizName}</span> <br /></span>
+  <span class="table__td"><b>URL </b> : <a href='https://${el.bizName}.prackr.com' target='_Blank'>${el.bizName}</a> <br /></span>
+  </td>
   <td>
   <span class="table__td"><b>Name</b> : <span class='name'>${el.createdBy.firstName + " " +el.createdBy.lastName}</span> <br /></span>
   <span class="table__td"><b>Email </b> : <span class='email1'>${el.createdBy.email}</span> <br /></span>
