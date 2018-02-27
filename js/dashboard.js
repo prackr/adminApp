@@ -62,7 +62,7 @@
   </td>
   <td>
   <span class="table__td"> <span class="text-bold">By User</span>: <span>${el.numOfUsersByUser}</span> <br /></span>
-  <span class="table__td"><span class="text-bold">In DB</span>: <span>${el.numOfUsers}</span> <br /></span>
+  <span class="table__td"><span class="text-bold">Num Of Licenses</span>: <span>${el.numOfUsers}</span> <br /></span>
   <span class="table__td"><span class="text-bold">Current Staffs</span>: <span>${el.staffLength}</span> <br /></span>
   </td>
   <td class="text-center">
