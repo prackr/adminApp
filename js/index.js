@@ -223,7 +223,8 @@ $(document).ready(function () {
                     //company signup process start
                       $.post(baseUrl+"company/signup",
                           { email: email, cName: cName, bizName:cbizName,
-                            numOfUsers: cNoOfUsers, plan:cPlan, message:cMessage
+                            numOfUsers: cNoOfUsers, plan:cPlan, message:cMessage,
+                            numOfUsersByUser:cNoOfUsers
                           },
                           function(data){
                             if (data.status == 200) {
@@ -282,7 +283,8 @@ $(document).ready(function () {
       //create user first , then company
         $.post(baseUrl+"company/signup",
           { email: email, cName: cName, bizName:cbizName,
-            numOfUsers: cNoOfUsers, plan:cPlan, message:cMessage
+            numOfUsers: cNoOfUsers, plan:cPlan, message:cMessage,
+            numOfUsersByUser:cNoOfUsers
           },
           function(data){
             if (data.status == 200) {
