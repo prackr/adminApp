@@ -31,13 +31,13 @@ $(document).ready(function () {
   //two way data binding if user is new
   $("#cName").on("change keyup paste click", function(){
     let bizName = $('#cName').val();
-    $('#cBizName').val(bizName.toLowercase());
+    $('#cBizName').val(bizName);
   });
 
   //two way data binding if user is in db
   $("#cName1").on("change keyup paste click", function(){
     let bizName = $('#cName1').val();
-    $('#cBizName1').val(bizName.toLowercase());
+    $('#cBizName1').val(bizName);
   });
 
   // toastr options
