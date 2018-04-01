@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
   //base api url
-  let baseUrl = 'https://taskto.com/api/v1/'
+  let baseUrl = 'https://api.prackr.com/v1/'
 
   $('.otp').hide();
   $('.user').hide();
