@@ -140,7 +140,7 @@ $(document).ready(function () {
                                   <span id="uClogo" class="col-md-2 col-sm-2 col-xs-2 text-left"><img src="${img}" alt="" width="35px" height="35px"></span>
                                   <span id="uCname" class="col-md-6 col-sm-6 col-xs-6 text-left">${el.name}</span>
                                   <span class="col-md-4 col-sm-4 col-xs-4 text-right">
-                                      <a id="uCLbtn" href='${"https://"+el.bizName+".taskto.com"}' targent="_blank"  class="btn btn-raised btn-info btn-md ripple-effect">Login</a>
+                                      <a id="uCLbtn" href='${"https://"+el.bizName+".prackr.com"}' targent="_blank"  class="btn btn-raised btn-info btn-md ripple-effect">Login</a>
                                   </span>
                               </li>`;
                     $('#workspaces').append(li);
@@ -228,8 +228,8 @@ $(document).ready(function () {
                           },
                           function(data){
                             if (data.status == 200) {
-                              $('#bizURL1').text(`https://${data.data.bizName}.taskto.com`);
-                              $("a.bizURL2").attr("href", `https://${data.data.bizName}.taskto.com`);
+                              $('#bizURL1').text(`https://${data.data.bizName}.prackr.com`);
+                              $("a.bizURL2").attr("href", `https://${data.data.bizName}.prackr.com`);
                               $('.user').hide();
                               $('.firstCard').hide();
                               $('.step').hide();
@@ -238,7 +238,7 @@ $(document).ready(function () {
                               // toastr.info("workspace created successfully.");
                               // toastr.info("please wait, while redirect you to your workspace.");
                               setTimeout(function(){
-                                $(location).attr('href',`https://${data.data.bizName}.taskto.com`);
+                                $(location).attr('href',`https://${data.data.bizName}.prackr.com`);
                               }, 7000);
                             }else{
                               toastr.error(data.message);
@@ -288,8 +288,8 @@ $(document).ready(function () {
           },
           function(data){
             if (data.status == 200) {
-              $('#bizURL1').text(`https://${data.data.bizName}.taskto.com`);
-              $("a.bizURL2").attr("href", `https://${data.data.bizName}.taskto.com`);
+              $('#bizURL1').text(`https://${data.data.bizName}.prackr.com`);
+              $("a.bizURL2").attr("href", `https://${data.data.bizName}.prackr.com`);
               $('.company').hide();
               $('.firstCard').hide();
               $('.step').hide();
@@ -298,7 +298,7 @@ $(document).ready(function () {
               // toastr.info("workspace created successfully.");
               // toastr.info("please wait, while redirect you to your workspace.");
               setTimeout(function(){
-                $(location).attr('href',`https://${data.data.bizName}.taskto.com`);
+                $(location).attr('href',`https://${data.data.bizName}.prackr.com`);
               }, 7000);
             }else{
               toastr.error(data.message);
