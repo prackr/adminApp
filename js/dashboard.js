@@ -1,6 +1,6 @@
 
   //base api url
-  let baseUrl = 'https://taskto.com/api/v1/';
+  let baseUrl = 'https://api.prackr.com/v1/';
 
    //companies load start
    function getWS(token, page) {
